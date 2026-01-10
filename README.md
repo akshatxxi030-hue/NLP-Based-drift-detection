@@ -30,8 +30,20 @@ This project identifies whether *current news headlines differ significantly* fr
 - News feed preview
 - Most-used words comparison (baseline vs current)
 
-## Huge data sets were not uploaded due to size compatibility
-## Pre-trained TF-IDF vectorizer and bseline statistics are stored as serialized artifacts and inference reproductibility.
+Large raw datasets were *not uploaded* due to size constraints.
 
+Instead:
+- A *pre-trained TF-IDF vectorizer*
+- Baseline statistics (mean vector)
+
+are stored as serialized artifacts (.pkl) to ensure *reproducibility* and *efficient inference*.
+
+---
+
+## ⚙️ How to Run
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
 
 
