@@ -30,4 +30,8 @@ This project identifies whether *current news headlines differ significantly* fr
 - News feed preview
 - Most-used words comparison (baseline vs current)
 
+## Huge data sets were not uploaded due to size compatibility
+## Pre-trained TF-IDF vectorizer and bseline statistics are stored as serialized artifacts and inference reproductibility.
+
+
 
