@@ -8,10 +8,12 @@ This project identifies whether *current news headlines differ significantly* fr
 
 ##  Tech Stack
 - Python
+-  Natural Language Processsing(NLP)
 - Streamlit
 - scikit-learn
 - Pandas, NumPy
-- Matplotlib
+- TF-IDF Vectorization
+
 
 ##  Approach
 1. Preprocessed news headlines (lowercase, removed URLs, stopwords, noise,etra spaces,)
