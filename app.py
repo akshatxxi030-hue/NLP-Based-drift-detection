@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-import matplotlib.pyplot as plt
 import pickle
 from preprocessing import preprocess_text
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -113,7 +112,7 @@ def get_top_words(mean_vector, vectorizer, top_n=15):
    
     top_indices = sorted_indices[:top_n]
     
-    # 5. Get top words and their scores
+  
     top_words = words[top_indices]
     top_scores = mean_vector[top_indices]
     
@@ -142,6 +141,7 @@ with col2:
 
 overall_similarity = cosine_similarity(current_mean, mean_baseline)[0][0]
 overall_drift = 1 - overall_similarity
+
 
 
 
