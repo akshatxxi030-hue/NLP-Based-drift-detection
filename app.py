@@ -112,7 +112,7 @@ def get_top_words(mean_vector, vectorizer, top_n=15):
    
     top_indices = sorted_indices[:top_n]
     
-    # 5. Get top words and their scores
+    
     top_words = words[top_indices]
     top_scores = mean_vector[top_indices]
     
