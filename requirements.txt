@@ -1,9 +1,12 @@
-streamlit
+
 pandas
 numpy
 scikit-learn
 requests
 feedparser
 nltk
+fastapi
+uvicorn
+
 
 
