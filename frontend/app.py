@@ -2,9 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-# =========================
-# Page config
-# =========================
+
 st.set_page_config(
     page_title="News Drift Monitoring",
     layout="wide"
@@ -13,14 +11,10 @@ st.set_page_config(
 st.title("📊 News Drift Monitoring Dashboard")
 st.write("Automated drift detection between baseline and current datasets")
 
-# =========================
-# API URL
-# =========================
-API_URL = "http://localhost:8000/predict"  # change if deployed
 
-# =========================
-# Run Drift
-# =========================
+API_URL = "https://nlp-based-drift-detection.onrender.com/predict"  # change if deployed
+
+
 if st.button("Run Drift Analysis 🚀"):
     with st.spinner("Calculating drift..."):
         try:
@@ -29,9 +23,6 @@ if st.button("Run Drift Analysis 🚀"):
             if response.status_code == 200:
                 result = response.json()
 
-                # =========================
-                # Overall Drift
-                # =========================
                 st.subheader("📌 Overall Drift")
                 st.metric(
                     label="Drift Score",
@@ -41,18 +32,14 @@ if st.button("Run Drift Analysis 🚀"):
                 st.info(f"**Drift Level:** {result['drift_level']}")
                 st.warning(result["message"])
 
-                # =========================
-                # Batch Drift
-                # =========================
+               
                 st.subheader("📦 Batch-wise Drift")
                 batch_df = pd.DataFrame(result["batch_drift"])
                 st.line_chart(
                     batch_df.set_index("batch")["drift"]
                 )
 
-                # =========================
-                # Top Words
-                # =========================
+            
                 st.subheader("🔑 Top TF-IDF Words")
 
                 col1, col2 = st.columns(2)
