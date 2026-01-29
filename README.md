@@ -3,6 +3,7 @@
 This project detects *concept drift in news headlines* by comparing recent news with a historical baseline using NLP techniques.
 
 ## Model link -https://nlp-based-drift-detection-6afdkooqqfqfgjtzvajbss.streamlit.app/
+## Live fast api link -https://nlp-based-drift-detection.onrender.com/predict
 
 ##  Problem Statement
 News topics evolve over time.  
