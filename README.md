@@ -30,7 +30,6 @@ This project identifies whether *current news headlines differ significantly* fr
 ##  Features
 - Overall drift score (shown at top)
 - Drift trend across headline batches (line chart)
-- News feed preview
 - Most-used words comparison (baseline vs current)
 
 Large raw datasets were *not uploaded* due to size constraints.
